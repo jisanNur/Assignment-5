@@ -11,11 +11,11 @@
 
 <body>
 
-    <div class=" top-0 sticky z-10 w-full">
-        <div class="navbar px-20 py-8 bg-[#F9F7F3] items-center ">
+    <div class=" top-0 sticky z-10 w-full ">
+        <div class="navbar px-20 py-8 bg-[#F9F7F3] items-center max-[576px]:flex-col">
             <!-- Blog Button  -->
-            <div class="navbar-start">
-                <button class="btn bg-[#B4F461] text-xl border-none px-6">Blog</button>
+            <div class="navbar-start ">
+                <button class="btn bg-[#B4F461] text-xl border-none px-6 ">Blog</button>
             </div>
             <div class="navbar-center gap-4">
                 <img class="w-12" src="./assets/logo.png" alt="">
@@ -24,38 +24,42 @@
             <!-- Available Amount  -->
             <div class="navbar-end gap-2">
                 <img class="w-6" src="./assets/coin.png" alt="">
-                <h2  id="donat-balance" class="text-lg font-semibold text-gray-600">5500 BDT</h2>
+                <h2 id="donat-balance" class="text-lg font-semibold text-gray-600">5500</h2>
+                <h2 class="text-lg font-semibold text-gray-600">BDT</h2>
             </div>
 
         </div>
 
-        <!-- Donation and History Butoon  -->
-        <div class="px-20 py-8 bg-white justify-items-center  w-full top-0 fixe">
+        <!-- Donation and History Button  -->
+        <div class="px-20 py-8 bg-white justify-items-center">
             <div class="flex gap-4 justify-center">
                 <!-- Donation btn  -->
-                <button class="btn bg-[#B4F461] text-xl border-none px-6">Donation</button>
+                <button id="donate-btn" class="btn bg-[#B4F461] text-xl border-none px-6">Donation</button>
 
                 <!-- History btn  -->
-                <button class="btn text-xl border-none px-6">History</button>
+                <button id="history-btn" class="btn text-xl border-none px-6">History</button>
             </div>
         </div>
     </div>
-    <main class="">
+
+    <div id="history-section" class="flex w-[50%]  justify-center">
+
+    </div>
+    <main id="donation-section" class="">
+        <!-- Noakhali section -->
         <div
-            class="flex w-[50%] gap-6 p-8 justify-items-center bg-blur-[2px] border-2 border-gray-300 rounded-2xl mx-auto">
+            class="flex w-[50%]  justify-center max-[576px]:w-[80%] gap-6 p-8 justify-items-center bg-blur-[2px] border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col">
             <!-- Noakhali Image  -->
             <div class="w-[100%]">
-                <img src="./assets/noakhali.png" alt="">
+                <img class="w-full" src="./assets/noakhali.png" alt="">
             </div>
             <!-- Noakhali Donation Container  -->
 
             <div class="w-[100%]">
                 <!-- Donation Amount  -->
-                <div class="flex gap-2 bg-gray-200 rounded-xl w-[30%] p-2">
+                <div class="flex gap-2 bg-gray-200 rounded-xl w-[30%] max-[576px]:w-[50%] p-2 ">
+                    <img class="max[576px]:w-full" src="./assets/coin.png" alt="">
 
-                    <div class="">
-                        <img src="./assets/coin.png" alt="">
-                    </div>
                     <!-- Noakhali Donation Amount  -->
                     <div>
                         <h2 id="noakhali-donate-amount" class="text-lg font-semibold text-gray-500">0</h2>
@@ -66,7 +70,7 @@
                 </div>
 
                 <!-- Noakhali donation Title  -->
-                <div class="">
+                <div class="w-full">
                     <h2 class="text-lg font-semibold">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="mt-4"> The recent floods in Noakhali have caused significant damage to homes
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
@@ -75,23 +79,27 @@
 
                     <!-- Noakhali donation Input  -->
 
-                    <input id="noakhali-donate-input" type="number" placeholder="Write Donate Amount" class="input input-bordered w-full mt-4" />
+                    <input id="noakhali-donate-input" type="number" placeholder="Write Donate Amount"
+                        class="input input-bordered w-full mt-4" />
 
                     <!-- Noakhali donation Button  -->
                     <button id="noakhali-donate-btn"
                         class="btn bg-[#B4F461] text-xl border-none px-6 w-full mt-4">Donate Now</button>
-                        <!-- Noakhali Modal  -->
-                    <dialog id="my_modal_1" class="modal" disable>
-                        <form method="dialog" class="modal-box px-10 py-10 flex flex-col items-center justify-center">
-                            <h1 class="text-3xl font-bold ">Congrates</h1>
-                            <img class="w-6 mt-4" src="./assets/coin.png" alt="">
-                            <p class="py-4">You Have Donated for Humankind</p>
-                            <h1 class="text-3xl font-bold ">Successfully</h1>
-                            <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn mt-4">Close Confirmation</button>
-                        </form>
-                    </dialog>
 
+                    <!-- You can open the modal using ID.showModal() method -->
+                    <!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
+                    <dialog id="my_modal_4" class="modal">
+                        <div class="modal-box w-11/12 max-w-5xl">
+                            <h3 class="text-lg font-bold">Hello!</h3>
+                            <p class="py-4">Click the button below to close</p>
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <!-- if there is a button, it will close the modal -->
+                                    <button class="btn">Close</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
                 </div>
             </div>
             </dialog>
@@ -100,27 +108,31 @@
         </div>
         </div>
         </div>
+
+        <!-- Feni section -->
         <div
-            class="flex w-[50%] gap-6 p-8 justify-items-center sticky bg-blur-[2px] border-2 border-gray-300 rounded-2xl mx-auto">
+            class="flex w-[50%]  justify-center max-[576px]:w-[80%] gap-6 p-8 justify-items-center bg-blur-[2px] border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col mt-6">
             <!-- Feni Image  -->
             <div class="w-[100%]">
-                <img src="./assets/feni.png" alt="">
+                <img class="w-full" src="./assets/feni.png" alt="">
             </div>
             <!-- Feni Donation Container  -->
 
             <div class="w-[100%]">
                 <!-- Donation Amount  -->
-                <div class="flex gap-2 bg-gray-200 rounded-xl w-[30%] p-2">
+                <div class="flex gap-2 bg-gray-200 rounded-xl w-[30%] max-[576px]:w-[50%] p-2 ">
 
                     <div class="">
                         <img src="./assets/coin.png" alt="">
                     </div>
+
                     <!-- Feni Donation Amount  -->
                     <div>
-                        <h2 class="text-lg font-semibold text-gray-500">1000 BDT</h2>
+                        <h2 id="feni-amount" class="text-lg font-semibold text-gray-500">0<h2>
                     </div>
-
-
+                    <div>
+                        <h2 id="feni-amount" class="text-lg font-semibold text-gray-500">BDT</h2>
+                    </div>
                 </div>
 
                 <!-- Feni donation Title  -->
@@ -133,58 +145,63 @@
                         counts towards making a real difference. Please consider donating today to assist those in
                         urgent need.</p>
 
-                
-                        
-                        <!-- Feni donation Input  -->
-                        <input type="text" placeholder="Write Donate Amount" class="input input-bordered w-full mt-4" />
+                    <!-- Feni donation Input  -->
+                    <input id="feni-input" type="number" placeholder="Write Donate Amount"
+                        class="input input-bordered w-full mt-4" />
 
-                        <!-- Feni donation Button  -->
-                        <button class="btn bg-[#B4F461] text-xl border-none px-6 w-full mt-4">Donate Now</button>
+                    <!-- Feni donation Button  -->
+                    <button id="feni-btn" class="btn bg-[#B4F461] text-xl border-none px-6 w-full mt-4">Donate
+                        Now</button>
                 </div>
 
 
             </div>
         </div>
         <div
-            class="flex w-[50%] gap-6 p-8 justify-items-center sticky bg-blur-[2px] border-2 border-gray-300 rounded-2xl mx-auto">
-            <!-- Noakhali Image  -->
+            class="flex w-[50%]  justify-center max-[576px]:w-[80%] gap-6 p-8 justify-items-center bg-blur-[2px] border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col mt-6">
+            <!-- Quota Movement Image  -->
             <div class="w-[100%]">
-                <img src="./assets/quota-protest.png" alt="">
+                <img class="w-[100%]" src="./assets/quota-protest.png" alt="">
             </div>
-            <!-- Noakhali Donation Container  -->
+            <!-- Quota Movement Donation Container  -->
 
             <div class="w-[100%]">
                 <!-- Donation Amount  -->
-                <div class="flex gap-2 bg-gray-200 rounded-xl w-[30%] p-2">
+                <div class="flex gap-2 bg-gray-200 rounded-xl w-[30%] max-[576px]:w-[50%] p-2 ">
 
-                    <div class="">
+                    <div>
                         <img src="./assets/coin.png" alt="">
                     </div>
-                    <!-- Noakhali Donation Amount  -->
+                    <!-- Quota Movement Donation Amount  -->
                     <div>
-                        <h2 class="text-lg font-semibold text-gray-500">1000 BDT</h2>
+                        <h2 id="quota-amount" class="text-lg font-semibold text-gray-500">0</h2>
+                    </div>
+                    <div>
+                        <h2 id="quota-amount" class="text-lg font-semibold text-gray-500">BDT</h2>
                     </div>
 
 
                 </div>
 
-                <!-- Noakhali donation Title  -->
+                <!-- Quota Movement donation Title  -->
                 <div class="">
-                    <h2 class="text-lg font-semibold">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <h2 class="text-lg font-semibold">Aid for Injured in the Quota Movement</h2>
                     <p class="mt-4"> The recent floods in Noakhali have caused significant damage to homes
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                         relief efforts and making a positive impact on the lives of those in need.</p>
 
-                    <form>
 
-                        <input type="text" placeholder="Write Donate Amount" class="input input-bordered w-full mt-4" />
+                    <!-- Quota Movement donation Input  -->
 
-                        <!-- Noakhali donation Button  -->
-                        <button class="btn bg-[#B4F461] text-xl border-none px-6 w-full mt-4">Donate Now</button>
-                    </form>
+                    <input id="quota-input" type="number" placeholder="Write Donate Amount"
+                        class="input input-bordered w-full mt-4" />
 
-                    <!-- Noakhali donation Input  -->
+                    <!-- Quota Movement donation Button  -->
+                    <button id="quota-btn" class="btn bg-[#B4F461] text-xl border-none px-6 w-full mt-4">Donate
+                        Now</button>
+
+
                 </div>
 
 
