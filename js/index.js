@@ -3,43 +3,33 @@
 const noakhaliInput = document.getElementById('noakhali-donate-btn');
 noakhaliInput.addEventListener("click", function () {
 
-
-    const noakhalidonateInput = parseFloat(document.getElementById("noakhali-donate-input").value);
-
+    const noakhalidonateInput = inputValueElemnt("noakhali-donate-input")
 
     if (noakhalidonateInput <= 0 || isNaN(noakhalidonateInput)) {
         alert('Invailed Input');
         return;
     }
     else {
-        const noakhalidonateAmount = parseFloat(document.getElementById("noakhali-donate-amount").innerText);
+        const noakhalidonateAmount = textValueElemnt("noakhali-donate-amount");
 
         const noaNewDonate = noakhalidonateInput + noakhalidonateAmount;
 
         document.getElementById("noakhali-donate-amount").innerText = noaNewDonate;
 
-
-        const donateBalance = parseFloat(document.getElementById('donat-balance').innerText);
+        const donateBalance = textValueElemnt("donat-balance");
 
         const newdonateBalance = donateBalance - noaNewDonate;
 
         document.getElementById('donat-balance').innerText = newdonateBalance;
 
-        const historysection = document.createElement("div");
-        historysection.className = ' w-[100%] justify-center max-[576px]:w-[100%] gap-6 p-6 justify-items-center border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col'
+        createElement(noakhalidonateInput, "Donate for Flood at Noakhali, Bangladesh")
 
-        historysection.innerHTML = `
-        <h1 class="text-lg font-semibold">${noakhalidonateInput} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h1>
-        <p>Date & Time: ${new Date()}</p>
-        `
 
-        const historydonatelist = document.getElementById('history-section');
-        historydonatelist.insertBefore(historysection, historydonatelist.firstChild);
-
+        //----- modal ----
         const modal = document.getElementById('my_modal_4');
-        modal.showModal() = noakhaliInput;
-
+        modal.showModal();
     }
+
 
 })
 
@@ -68,29 +58,12 @@ feniInput.addEventListener("click", function () {
 
         document.getElementById('donat-balance').innerText = newdonateBalance;
 
-        const historysection = document.createElement("div");
-        historysection.className = ' w-[100%] justify-center max-[576px]:w-[100%] gap-6 p-6 justify-items-center border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col'
-
-        historysection.innerHTML = `
-        <h1 class="text-lg font-semibold">${fenidonateInput} Taka is Donated for Flood Relief in Feni,Bangladesh</h1>
-        <p>Date & Time: ${new Date()}</p>
-        `
-
-
-        const historydonatelist = document.getElementById('history-section');
-        historydonatelist.insertBefore(historysection, historydonatelist.firstChild);
-
+        createElement(fenidonateInput, "Taka Donate for Flood Relief in Feni,Bangladesh")
 
         //----- modal ----
         const modal = document.getElementById('my_modal_4');
         modal.showModal() = feniInput;
     }
-
-
-
-
-
-
 
 })
 
@@ -119,17 +92,7 @@ quotaInput.addEventListener("click", function () {
 
         document.getElementById('donat-balance').innerText = newdonateBalance;
 
-        const historysection = document.createElement("div");
-        historysection.className = ' w-[100%] justify-center max-[576px]:w-[100%] gap-6 p-6 justify-items-center border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col mt-2'
-
-        historysection.innerHTML = `
-        <h1 class="text-lg font-semibold">${quotadonateInput} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h1>
-        <p>Date & Time: ${new Date()}</p>
-        `
-
-
-        const historydonatelist = document.getElementById('history-section');
-        historydonatelist.insertBefore(historysection, historydonatelist.firstChild);
+        createElement(quotadonateInput, "Taka Aid for Injured in the Quota Movement");
 
         //----- modal ----
         const modal = document.getElementById('my_modal_4');
@@ -176,8 +139,12 @@ donateButton.addEventListener("click", function () {
 })
 
 const blogBtn = document.getElementById('blog-btn')
-blogBtn.addEventListener("click", function(){
+blogBtn.addEventListener("click", function () {
     window.location.href = "./blog.html";
 
 })
 
+document.getElementById('btn')
+    .addEventListener("click", function () {
+        window.location.reload();
+    })
