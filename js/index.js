@@ -1,6 +1,6 @@
 
 // Noakhali section 
-const noakhaliInput = document.getElementById('noakhali-donate-btn')
+const noakhaliInput = document.getElementById('noakhali-donate-btn');
 noakhaliInput.addEventListener("click", function () {
 
 
@@ -25,7 +25,7 @@ noakhaliInput.addEventListener("click", function () {
 
         document.getElementById('donat-balance').innerText = newdonateBalance;
 
-        const historysection = document.createElement("div")
+        const historysection = document.createElement("div");
         historysection.className = ' w-[100%] justify-center max-[576px]:w-[100%] gap-6 p-6 justify-items-center border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col'
 
         historysection.innerHTML = `
@@ -33,8 +33,8 @@ noakhaliInput.addEventListener("click", function () {
         <p>Date & Time: ${new Date()}</p>
         `
 
-        const historydonatelist = document.getElementById('history-section')
-        historydonatelist.insertBefore(historysection, historydonatelist.firstChild)
+        const historydonatelist = document.getElementById('history-section');
+        historydonatelist.insertBefore(historysection, historydonatelist.firstChild);
 
         const modal = document.getElementById('my_modal_4');
         modal.showModal() = noakhaliInput;
@@ -46,17 +46,17 @@ noakhaliInput.addEventListener("click", function () {
 
 // Feni section
 
-const feniInput = document.getElementById('feni-btn')
+const feniInput = document.getElementById('feni-btn');
 feniInput.addEventListener("click", function () {
 
-    const fenidonateInput = parseFloat(document.getElementById('feni-input').value)
+    const fenidonateInput = parseFloat(document.getElementById('feni-input').value);
 
     if (fenidonateInput <= 0 || isNaN(fenidonateInput)) {
         alert('Invailed Input');
         return;
     }
     else {
-        const feniAmount = parseFloat(document.getElementById('feni-amount').innerText)
+        const feniAmount = parseFloat(document.getElementById('feni-amount').innerText);
 
         const feninewbalance = fenidonateInput + feniAmount;
 
@@ -68,7 +68,7 @@ feniInput.addEventListener("click", function () {
 
         document.getElementById('donat-balance').innerText = newdonateBalance;
 
-        const historysection = document.createElement("div")
+        const historysection = document.createElement("div");
         historysection.className = ' w-[100%] justify-center max-[576px]:w-[100%] gap-6 p-6 justify-items-center border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col'
 
         historysection.innerHTML = `
@@ -77,8 +77,8 @@ feniInput.addEventListener("click", function () {
         `
 
 
-        const historydonatelist = document.getElementById('history-section')
-        historydonatelist.insertBefore(historysection, historydonatelist.firstChild)
+        const historydonatelist = document.getElementById('history-section');
+        historydonatelist.insertBefore(historysection, historydonatelist.firstChild);
 
 
         //----- modal ----
@@ -96,10 +96,10 @@ feniInput.addEventListener("click", function () {
 
 // Quata Movment 
 
-const quotaInput = document.getElementById('quota-btn')
+const quotaInput = document.getElementById('quota-btn');
 quotaInput.addEventListener("click", function () {
 
-    const quotadonateInput = parseFloat(document.getElementById('quota-input').value)
+    const quotadonateInput = parseFloat(document.getElementById('quota-input').value);
 
     if (quotadonateInput <= 0 || isNaN(quotadonateInput)) {
         alert('Invailed Input');
@@ -107,7 +107,7 @@ quotaInput.addEventListener("click", function () {
     }
     else {
 
-        const quotaAmount = parseFloat(document.getElementById('quota-amount').innerText)
+        const quotaAmount = parseFloat(document.getElementById('quota-amount').innerText);
 
         const quotanewbalance = quotadonateInput + quotaAmount;
 
@@ -119,7 +119,7 @@ quotaInput.addEventListener("click", function () {
 
         document.getElementById('donat-balance').innerText = newdonateBalance;
 
-        const historysection = document.createElement("div")
+        const historysection = document.createElement("div");
         historysection.className = ' w-[100%] justify-center max-[576px]:w-[100%] gap-6 p-6 justify-items-center border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col mt-2'
 
         historysection.innerHTML = `
@@ -128,8 +128,8 @@ quotaInput.addEventListener("click", function () {
         `
 
 
-        const historydonatelist = document.getElementById('history-section')
-        historydonatelist.insertBefore(historysection, historydonatelist.firstChild)
+        const historydonatelist = document.getElementById('history-section');
+        historydonatelist.insertBefore(historysection, historydonatelist.firstChild);
 
         //----- modal ----
         const modal = document.getElementById('my_modal_4');
@@ -141,7 +141,7 @@ quotaInput.addEventListener("click", function () {
 
 })
 
-const historyButton = document.getElementById('history-btn')
+const historyButton = document.getElementById('history-btn');
 
 historyButton.addEventListener("click", function () {
 
@@ -151,14 +151,14 @@ historyButton.addEventListener("click", function () {
         "text-xl",
         "border-none",
         "px-6");
-    donateButton.classList.remove("bg-[#B4F461]")
+    donateButton.classList.remove("bg-[#B4F461]");
 
-    document.getElementById('donation-section').classList.add("hidden")
-    document.getElementById('history-section').classList.remove("hidden")
+    document.getElementById('donation-section').classList.add("hidden");
+    document.getElementById('history-section').classList.remove("hidden");
 
 })
 
-const donateButton = document.getElementById('donate-btn')
+const donateButton = document.getElementById('donate-btn');
 donateButton.addEventListener("click", function () {
 
     donateButton.classList.add(
@@ -168,10 +168,16 @@ donateButton.addEventListener("click", function () {
         "border-none",
         "px-6"
     )
-    historyButton.classList.remove("bg-[#B4F461]")
+    historyButton.classList.remove("bg-[#B4F461]");
 
-    document.getElementById('donation-section').classList.remove("hidden")
-    document.getElementById('history-section').classList.add("hidden")
+    document.getElementById('donation-section').classList.remove("hidden");
+    document.getElementById('history-section').classList.add("hidden");
+
+})
+
+const blogBtn = document.getElementById('blog-btn')
+blogBtn.addEventListener("click", function(){
+    window.location.href = "./blog.html";
 
 })
 

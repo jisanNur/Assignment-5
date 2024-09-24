@@ -12,9 +12,9 @@
 
     <div class=" top-0 sticky z-10 w-full "></div>
         <div class="navbar py-8 bg-[#F9F7F3] items-center justify-evenly max-[576px]:flex-row-reverse">
-            <!-- Blog Button  -->
+            <!-- Home Button  -->
             <div class=" ">
-                <button class="btn bg-[#B4F461] text-xl border-none px-6 ">Home</button>
+                <button id="home-btn"  class="btn bg-[#B4F461] text-xl border-none px-6 ">Home</button>
             </div>
             <div class="navbar- gap-4">
                 <img class="w-12" src="./assets/logo.png" alt="">
@@ -23,7 +23,7 @@
             <!-- Available Amount  -->
             <div class="navbar-d gap-2">
                 <img class="w-6" src="./assets/coin.png" alt="">
-                <h2 id="donat-balance" class="text-lg font-semibold text-gray-600">5500</h2>
+                <h2 id="donat-balance" class="text-lg font-semibold text-gray-600">10000</h2>
                 <h2 class="text-lg font-semibold text-gray-600">BDT</h2>
             </div>
         </div>
@@ -58,5 +58,10 @@
             <p>hello</p>
           </div>
     </div>
+    <script>
+        document.getElementById("home-btn").addEventListener("click", function () {
+        window.location.href = "./index.html";
+  });
+    </script>
 </body>
 </html>
