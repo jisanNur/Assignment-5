@@ -30,7 +30,7 @@ function createElement(noakhalidonateInput, title) {
 
 }
 
-// Reload function 
-function reloadInput(id){
-    window.location.reload(id);
+function clearInput(){
+    document.getElementById('noakhali-donate-input').value = '';
+    document.getElementById('quota-input').value = '';
 }

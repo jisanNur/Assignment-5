@@ -28,9 +28,12 @@ noakhaliInput.addEventListener("click", function () {
         //----- modal ----
         const modal = document.getElementById('my_modal_4');
         modal.showModal();
+
+        clearInput('noakhali-donate-btn')
     }
 
-
+    
+    
 })
 
 
@@ -97,6 +100,8 @@ quotaInput.addEventListener("click", function () {
         //----- modal ----
         const modal = document.getElementById('my_modal_4');
         modal.showModal() = feniInput;
+
+        clearInput('quota-input')
     }
 
 
@@ -144,7 +149,3 @@ blogBtn.addEventListener("click", function () {
 
 })
 
-document.getElementById('btn')
-    .addEventListener("click", function () {
-        window.location.reload();
-    })
