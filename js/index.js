@@ -106,7 +106,7 @@ quotaInput.addEventListener("click", function () {
         return;
     }
     else {
-        
+
         const quotaAmount = parseFloat(document.getElementById('quota-amount').innerText)
 
         const quotanewbalance = quotadonateInput + quotaAmount;
@@ -120,10 +120,10 @@ quotaInput.addEventListener("click", function () {
         document.getElementById('donat-balance').innerText = newdonateBalance;
 
         const historysection = document.createElement("div")
-        historysection.className = ' w-[100%] justify-center max-[576px]:w-[100%] gap-6 p-6 justify-items-center border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col'
+        historysection.className = ' w-[100%] justify-center max-[576px]:w-[100%] gap-6 p-6 justify-items-center border-2 border-gray-300 rounded-2xl mx-auto max-[576px]:flex-col mt-2'
 
         historysection.innerHTML = `
-        <h1 class="text-lg font-semibold">${quotadonateInput} 15500 Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h1>
+        <h1 class="text-lg font-semibold">${quotadonateInput} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h1>
         <p>Date & Time: ${new Date()}</p>
         `
 
@@ -171,4 +171,7 @@ donateButton.addEventListener("click", function () {
     historyButton.classList.remove("bg-[#B4F461]")
 
     document.getElementById('donation-section').classList.remove("hidden")
+    document.getElementById('history-section').classList.add("hidden")
+
 })
+
