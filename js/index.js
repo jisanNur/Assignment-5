@@ -3,7 +3,7 @@
 const noakhaliInput = document.getElementById('noakhali-donate-btn');
 noakhaliInput.addEventListener("click", function () {
 
-    const noakhalidonateInput = inputValueElemnt("noakhali-donate-input")
+    const noakhalidonateInput = inputValueElemnt("noakhali-donate-input");
 
     if (noakhalidonateInput <= 0 || isNaN(noakhalidonateInput)) {
         alert('Invailed Input');
@@ -22,16 +22,18 @@ noakhaliInput.addEventListener("click", function () {
 
         document.getElementById('donat-balance').innerText = newdonateBalance;
 
-        createElement(noakhalidonateInput, "Donate for Flood at Noakhali, Bangladesh")
+        createElement(noakhalidonateInput, "Taka Donate for Flood at Noakhali, Bangladesh")
 
 
         //----- modal ----
         const modal = document.getElementById('my_modal_4');
         modal.showModal();
 
-        clearInput('noakhali-donate-btn')
-    }
+        clear("noakhali-donate-input")
 
+    }   
+    
+   
     
     
 })
@@ -65,7 +67,9 @@ feniInput.addEventListener("click", function () {
 
         //----- modal ----
         const modal = document.getElementById('my_modal_4');
-        modal.showModal() = feniInput;
+        modal.showModal();
+
+        clear('feni-input')
     }
 
 })
@@ -99,9 +103,9 @@ quotaInput.addEventListener("click", function () {
 
         //----- modal ----
         const modal = document.getElementById('my_modal_4');
-        modal.showModal() = feniInput;
+        modal.showModal();
 
-        clearInput('quota-input')
+        clear('quota-input')
     }
 
 

@@ -5,8 +5,7 @@ function inputValueElemnt(id) {
     return inputValue;
 }
 
-// Text Value function 
-
+// Text Value function
 function textValueElemnt(id) {
     const textValue = parseFloat(document.getElementById(id).innerHTML)
     return textValue;
@@ -30,7 +29,7 @@ function createElement(noakhalidonateInput, title) {
 
 }
 
-function clearInput(){
-    document.getElementById('noakhali-donate-input').value = '';
-    document.getElementById('quota-input').value = '';
+// Input reset clear function 
+function clear(id){
+    document.getElementById(id).value = '';
 }
