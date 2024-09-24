@@ -12,17 +12,17 @@
 <body>
 
     <div class=" top-0 sticky z-10 w-full ">
-        <div class="navbar px-20 py-8 bg-[#F9F7F3] items-center max-[576px]:flex-col">
+        <div class="navbar py-8 bg-[#F9F7F3] items-center justify-evenly max-[576px]:flex-row-reverse">
             <!-- Blog Button  -->
-            <div class="navbar-start ">
+            <div class=" ">
                 <button class="btn bg-[#B4F461] text-xl border-none px-6 ">Blog</button>
             </div>
-            <div class="navbar-center gap-4">
+            <div class="navbar- gap-4">
                 <img class="w-12" src="./assets/logo.png" alt="">
-                <p class="font-bold text-xl">Donate Bangladesh</p>
+                <p class="font-bold text-xl max-[576px]:hidden">Donate Bangladesh</p>
             </div>
             <!-- Available Amount  -->
-            <div class="navbar-end gap-2">
+            <div class="navbar-d gap-2">
                 <img class="w-6" src="./assets/coin.png" alt="">
                 <h2 id="donat-balance" class="text-lg font-semibold text-gray-600">5500</h2>
                 <h2 class="text-lg font-semibold text-gray-600">BDT</h2>
@@ -42,9 +42,7 @@
         </div>
     </div>
 
-    <div id="history-section" class="flex w-[50%]  justify-center">
-
-    </div>
+    
     <main id="donation-section" class="">
         <!-- Noakhali section -->
         <div
@@ -57,7 +55,7 @@
 
             <div class="w-[100%]">
                 <!-- Donation Amount  -->
-                <div class="flex gap-2 bg-gray-200 rounded-xl w-[30%] max-[576px]:w-[50%] p-2 ">
+                <div class="flex gap-2 bg-gray-200 rounded-xl w-fit max-[576px]:w-[50%] p-2 ">
                     <img class="max[576px]:w-full" src="./assets/coin.png" alt="">
 
                     <!-- Noakhali Donation Amount  -->
@@ -79,19 +77,21 @@
 
                     <!-- Noakhali donation Input  -->
 
-                    <input id="noakhali-donate-input" type="number" placeholder="Write Donate Amount"
+                    <input id="noakhali-donate-input" type="text" placeholder="Write Donate Amount"
                         class="input input-bordered w-full mt-4" />
 
                     <!-- Noakhali donation Button  -->
                     <button id="noakhali-donate-btn"
                         class="btn bg-[#B4F461] text-xl border-none px-6 w-full mt-4">Donate Now</button>
 
-                    <!-- You can open the modal using ID.showModal() method -->
-                    <!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
+                    <!-- modal  -->
+                    
                     <dialog id="my_modal_4" class="modal">
-                        <div class="modal-box w-11/12 max-w-5xl">
-                            <h3 class="text-lg font-bold">Hello!</h3>
-                            <p class="py-4">Click the button below to close</p>
+                        <div class="modal-box w-[30%] max-w-5xl space-y-2">
+                            <h3 class="text-lg font-bold text-center">Congrates!</h3>
+                            <img class="w-fit mx-auto" src="./assets/coin.png" alt="">
+                            <p class="py-4 text-center">You Have Donate for Humankind</p>
+                            <h2 class="text-xl font-bold text-center">Successfully</h2>
                             <div class="modal-action">
                                 <form method="dialog">
                                     <!-- if there is a button, it will close the modal -->
@@ -120,7 +120,7 @@
 
             <div class="w-[100%]">
                 <!-- Donation Amount  -->
-                <div class="flex gap-2 bg-gray-200 rounded-xl w-[30%] max-[576px]:w-[50%] p-2 ">
+                <div class="flex gap-2 bg-gray-200 rounded-xl w-fit max-[576px]:w-[50%] p-2 ">
 
                     <div class="">
                         <img src="./assets/coin.png" alt="">
@@ -167,7 +167,7 @@
 
             <div class="w-[100%]">
                 <!-- Donation Amount  -->
-                <div class="flex gap-2 bg-gray-200 rounded-xl w-[30%] max-[576px]:w-[50%] p-2 ">
+                <div class="flex gap-2 bg-gray-200 rounded-xl w-fit max-[576px]:w-[50%] p-2 ">
 
                     <div>
                         <img src="./assets/coin.png" alt="">
@@ -194,7 +194,7 @@
 
                     <!-- Quota Movement donation Input  -->
 
-                    <input id="quota-input" type="number" placeholder="Write Donate Amount"
+                    <input id="quota-input" type="text" placeholder="Write Donate Amount"
                         class="input input-bordered w-full mt-4" />
 
                     <!-- Quota Movement donation Button  -->
@@ -208,6 +208,12 @@
             </div>
         </div>
     </main>
+    <div id="history-section" class="flex w-[50%] hidden flex-col justify-center max-[576px]:w-[80%] gap-6 p-8 justify-items-center bg-blur-[2px] border-2 border-gray-300 rounded-2xl mx-auto mt-4">
+
+
+    </div>
+        
+    </div>
     <script src="./js/index.js"></script>
 </body>
 
